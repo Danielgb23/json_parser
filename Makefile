@@ -36,7 +36,7 @@ $(LEXOUT):$(LEXFILE) $(YYTABC)
 	$(LEX) -o$(LEXOUT) $(LEXFILE)
 
 $(YYTABC):$(YACCFILE)
-	$(YACC) -o$(YYTABC) -dy $(YACCFILE)
+	$(YACC) -o$(YYTABC) -dyt $(YACCFILE)
 
 test:all
 	$(BASH) $(TEST_SCRIPT) $(TARGET) $(VERBOSE)
